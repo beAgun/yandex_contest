@@ -14,7 +14,7 @@ def find_seats(map, num, side, position):
 
             print('Passengers can take seats:', end='')
             range_ = range(num) if (s and pos) or (not s and not pos) else range(3)[3 - num:]
-            #print(range_)
+            
             for i in range_:
                 print(' ' + '{}{}'.format(row + 1, letters[side][i]), end='')
             print()
@@ -36,10 +36,6 @@ def main():
     map = {}
     for i in range(n):
         left, right = input().split('_')
-        #a, b, c = left
-        #d, e, f = right
-        #map[i + 1] = {'left': {'A': a, 'B': b, 'C': c},
-        #                       'right':{'D': d, 'E': e, 'F': f}}
         map[i] = {'left': left, 'right': right}
 
     m = int(input())
